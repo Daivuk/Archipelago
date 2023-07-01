@@ -95,12 +95,11 @@ class DOOM1993World(World):
         # Create regions and locations
         for region_name in Regions.regions:
             region = Region(region_name, self.player, self.multiworld)
-            locaitons = {
+            region.add_locations({
                 loc["name"]: (loc_id if loc["index"] != -1 else None)
                 for loc_id, loc in Locations.location_table.items()
                 if loc["region"] == region_name and self.included_episodes[loc["episode"] - 1]
-            }
-            region.add_locations(locaitons, DOOM1993Location)
+            }, DOOM1993Location)
 
             self.multiworld.regions.append(region)
             mars_region.add_exits({region_name: None})
