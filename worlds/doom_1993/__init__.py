@@ -90,7 +90,7 @@ class DOOM1993World(World):
         menu_region = Region("Menu", self.player, self.multiworld)
         mars_region = Region("Mars", self.player, self.multiworld)
         self.multiworld.regions += [menu_region, mars_region]
-        menu_region.add_exits({"Mars": None})
+        menu_region.add_exits(["Mars"])
 
         # Create regions and locations
         for region_name in Regions.regions:
@@ -101,8 +101,10 @@ class DOOM1993World(World):
                 if loc["region"] == region_name and self.included_episodes[loc["episode"] - 1]
             }, DOOM1993Location)
 
-            self.multiworld.regions.append(region)
-            mars_region.add_exits({region_name: None})
+            self.multiworld.regions.append(Regions.regions)
+
+        # Link all regions to Mars
+        mars_region.add_exits(Regions.regions)
 
         # Sum locations for items creation
         self.location_count = len(self.multiworld.get_locations(self.player))
