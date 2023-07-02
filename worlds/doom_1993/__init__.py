@@ -101,7 +101,7 @@ class DOOM1993World(World):
                 if loc["region"] == region_name and self.included_episodes[loc["episode"] - 1]
             }, DOOM1993Location)
 
-            self.multiworld.regions.append(Regions.regions)
+            self.multiworld.regions.append(region)
 
         # Link all regions to Mars
         mars_region.add_exits(Regions.regions)
