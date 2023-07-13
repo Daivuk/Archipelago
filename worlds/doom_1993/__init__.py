@@ -40,7 +40,7 @@ class DOOM1993World(World):
     option_definitions = Options.options
     game = "DOOM 1993"
     web = DOOM1993Web()
-    data_version = 2
+    data_version = 3
     required_client_version = (0, 3, 9)
 
     item_name_to_id = {data["name"]: item_id for item_id, data in Items.item_table.items()}
@@ -52,7 +52,8 @@ class DOOM1993World(World):
     starting_level_for_episode: List[str] = [
         "Hangar (E1M1)",
         "Deimos Anomaly (E2M1)",
-        "Hell Keep (E3M1)"
+        "Hell Keep (E3M1)",
+        "Hell Beneath (E4M1)"
     ]
 
     # Item ratio that scales depending on episode count. These are the ratio for 3 episode.
@@ -71,7 +72,7 @@ class DOOM1993World(World):
     }
 
     def __init__(self, world: MultiWorld, player: int):
-        self.included_episodes = [1, 1, 1]
+        self.included_episodes = [1, 1, 1, 0]
         self.location_count = 0
 
         super().__init__(world, player)
@@ -81,7 +82,7 @@ class DOOM1993World(World):
 
     def generate_early(self):
         # Cache which episodes are included
-        for i in range(3):
+        for i in range(4):
             self.included_episodes[i] = getattr(self.multiworld, f"episode{i + 1}")[self.player].value
 
         # If no episodes selected, select Episode 1
@@ -264,7 +265,7 @@ class DOOM1993World(World):
         remaining_loc = self.location_count - len(itempool)
         ep_count = self.get_episode_count()
 
-        # Was balanced for 3 episodes
+        # Was balanced for 3 episodes (We added 4th episode, but keep same ratio)
         count = min(remaining_loc, max(1, int(round(self.items_ratio[item_name] * ep_count / 3))))
         if count == 0:
             logger.warning("Warning, no ", item_name, " will be placed.")
