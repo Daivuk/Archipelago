@@ -394,14 +394,14 @@ def set_rules(doom_1993_world: "DOOM1993World"):
     set_rule(world.get_entrance("Hub -> Perfect Hatred (E4M2) Main", player), lambda state:
         state.has("Perfect Hatred (E4M2)", player, 1))
     set_rule(world.get_entrance("Perfect Hatred (E4M2) Main -> Perfect Hatred (E4M2) Blue", player), lambda state:
-        state.has("Perfect Hatred (E4M2) - Blue keycard", player, 1))
+        state.has("Perfect Hatred (E4M2) - Blue skull key", player, 1))
+    set_rule(world.get_entrance("Perfect Hatred (E4M2) Main -> Perfect Hatred (E4M2) Yellow", player), lambda state:
+        state.has("Perfect Hatred (E4M2) - Yellow skull key", player, 1))
 
     # Sever the Wicked (E4M3)
     set_rule(world.get_entrance("Hub -> Sever the Wicked (E4M3) Main", player), lambda state:
         state.has("Sever the Wicked (E4M3)", player, 1))
     set_rule(world.get_entrance("Sever the Wicked (E4M3) Main -> Sever the Wicked (E4M3) Red", player), lambda state:
-        state.has("Sever the Wicked (E4M3) - Red skull key", player, 1))
-    set_rule(world.get_entrance("Sever the Wicked (E4M3) Main -> Sever the Wicked (E4M3) Across Canal", player), lambda state:
         state.has("Sever the Wicked (E4M3) - Red skull key", player, 1))
     set_rule(world.get_entrance("Sever the Wicked (E4M3) Red -> Sever the Wicked (E4M3) Blue", player), lambda state:
         state.has("Sever the Wicked (E4M3) - Blue skull key", player, 1))

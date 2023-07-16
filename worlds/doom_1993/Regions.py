@@ -372,17 +372,27 @@ regions:List[RegionDict] = [
     # Perfect Hatred (E4M2)
     {"name":"Perfect Hatred (E4M2) Main",
      "connects_to_hub":True,
-     "connections":["Perfect Hatred (E4M2) Blue"]},
+     "connections":[
+        "Perfect Hatred (E4M2) Blue",
+        "Perfect Hatred (E4M2) Yellow"]},
     {"name":"Perfect Hatred (E4M2) Blue",
      "connects_to_hub":False,
-     "connections":["Perfect Hatred (E4M2) Main"]},
+     "connections":[
+        "Perfect Hatred (E4M2) Main",
+        "Perfect Hatred (E4M2) Cave"]},
+    {"name":"Perfect Hatred (E4M2) Yellow",
+     "connects_to_hub":False,
+     "connections":[
+        "Perfect Hatred (E4M2) Main",
+        "Perfect Hatred (E4M2) Cave"]},
+    {"name":"Perfect Hatred (E4M2) Cave",
+     "connects_to_hub":False,
+     "connections":[]},
 
     # Sever the Wicked (E4M3)
     {"name":"Sever the Wicked (E4M3) Main",
      "connects_to_hub":True,
-     "connections":[
-        "Sever the Wicked (E4M3) Red",
-        "Sever the Wicked (E4M3) Across Canal"]},
+     "connections":["Sever the Wicked (E4M3) Red"]},
     {"name":"Sever the Wicked (E4M3) Red",
      "connects_to_hub":False,
      "connections":[
@@ -391,9 +401,6 @@ regions:List[RegionDict] = [
     {"name":"Sever the Wicked (E4M3) Blue",
      "connects_to_hub":False,
      "connections":["Sever the Wicked (E4M3) Red"]},
-    {"name":"Sever the Wicked (E4M3) Across Canal",
-     "connects_to_hub":False,
-     "connections":["Sever the Wicked (E4M3) Main"]},
 
     # Unruly Evil (E4M4)
     {"name":"Unruly Evil (E4M4) Main",
