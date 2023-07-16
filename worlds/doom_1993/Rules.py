@@ -386,13 +386,20 @@ def set_rules(doom_1993_world: "DOOM1993World"):
     set_rule(world.get_entrance("Hub -> Hell Beneath (E4M1) Main", player), lambda state:
         state.has("Hell Beneath (E4M1)", player, 1))
     set_rule(world.get_entrance("Hell Beneath (E4M1) Main -> Hell Beneath (E4M1) Red", player), lambda state:
-        state.has("Hell Beneath (E4M1) - Red skull key", player, 1))
+       (state.has("Hell Beneath (E4M1) - Red skull key", player, 1)) and       (state.has("Shotgun", player, 1) or
+        state.has("Chaingun", player, 1)))
     set_rule(world.get_entrance("Hell Beneath (E4M1) Main -> Hell Beneath (E4M1) Blue", player), lambda state:
-        state.has("Hell Beneath (E4M1) - Blue skull key", player, 1))
+       (state.has("Hell Beneath (E4M1) - Blue skull key", player, 1)) and       (state.has("Shotgun", player, 1) or
+        state.has("Chaingun", player, 1)))
 
     # Perfect Hatred (E4M2)
     set_rule(world.get_entrance("Hub -> Perfect Hatred (E4M2) Main", player), lambda state:
-        state.has("Perfect Hatred (E4M2)", player, 1))
+       (state.has("Perfect Hatred (E4M2)", player, 1) and
+        state.has("Shotgun", player, 1) and
+        state.has("Chaingun", player, 1)) and
+       (state.has("Rocket launcher", player, 1) or
+        state.has("Plasma gun", player, 1) or
+        state.has("BFG9000", player, 1)))
     set_rule(world.get_entrance("Perfect Hatred (E4M2) Main -> Perfect Hatred (E4M2) Blue", player), lambda state:
         state.has("Perfect Hatred (E4M2) - Blue skull key", player, 1))
     set_rule(world.get_entrance("Perfect Hatred (E4M2) Main -> Perfect Hatred (E4M2) Yellow", player), lambda state:
@@ -400,7 +407,12 @@ def set_rules(doom_1993_world: "DOOM1993World"):
 
     # Sever the Wicked (E4M3)
     set_rule(world.get_entrance("Hub -> Sever the Wicked (E4M3) Main", player), lambda state:
-        state.has("Sever the Wicked (E4M3)", player, 1))
+       (state.has("Sever the Wicked (E4M3)", player, 1) and
+        state.has("Shotgun", player, 1) and
+        state.has("Chaingun", player, 1)) and
+       (state.has("Rocket launcher", player, 1) or
+        state.has("Plasma gun", player, 1) or
+        state.has("BFG9000", player, 1)))
     set_rule(world.get_entrance("Sever the Wicked (E4M3) Main -> Sever the Wicked (E4M3) Red", player), lambda state:
         state.has("Sever the Wicked (E4M3) - Red skull key", player, 1))
     set_rule(world.get_entrance("Sever the Wicked (E4M3) Red -> Sever the Wicked (E4M3) Blue", player), lambda state:
@@ -412,13 +424,23 @@ def set_rules(doom_1993_world: "DOOM1993World"):
 
     # Unruly Evil (E4M4)
     set_rule(world.get_entrance("Hub -> Unruly Evil (E4M4) Main", player), lambda state:
-        state.has("Unruly Evil (E4M4)", player, 1))
+       (state.has("Unruly Evil (E4M4)", player, 1) and
+        state.has("Shotgun", player, 1) and
+        state.has("Chaingun", player, 1)) and
+       (state.has("Rocket launcher", player, 1) or
+        state.has("Plasma gun", player, 1) or
+        state.has("BFG9000", player, 1)))
     set_rule(world.get_entrance("Unruly Evil (E4M4) Main -> Unruly Evil (E4M4) Red", player), lambda state:
         state.has("Unruly Evil (E4M4) - Red skull key", player, 1))
 
     # They Will Repent (E4M5)
     set_rule(world.get_entrance("Hub -> They Will Repent (E4M5) Main", player), lambda state:
-        state.has("They Will Repent (E4M5)", player, 1))
+       (state.has("They Will Repent (E4M5)", player, 1) and
+        state.has("Shotgun", player, 1) and
+        state.has("Chaingun", player, 1)) and
+       (state.has("Rocket launcher", player, 1) or
+        state.has("Plasma gun", player, 1) or
+        state.has("BFG9000", player, 1)))
     set_rule(world.get_entrance("They Will Repent (E4M5) Main -> They Will Repent (E4M5) Red", player), lambda state:
         state.has("They Will Repent (E4M5) - Red skull key", player, 1))
     set_rule(world.get_entrance("They Will Repent (E4M5) Red -> They Will Repent (E4M5) Main", player), lambda state:
@@ -428,7 +450,12 @@ def set_rules(doom_1993_world: "DOOM1993World"):
 
     # Against Thee Wickedly (E4M6)
     set_rule(world.get_entrance("Hub -> Against Thee Wickedly (E4M6) Main", player), lambda state:
-        state.has("Against Thee Wickedly (E4M6)", player, 1))
+       (state.has("Against Thee Wickedly (E4M6)", player, 1) and
+        state.has("Shotgun", player, 1) and
+        state.has("Chaingun", player, 1)) and
+       (state.has("Rocket launcher", player, 1) or
+        state.has("Plasma gun", player, 1) or
+        state.has("BFG9000", player, 1)))
     set_rule(world.get_entrance("Against Thee Wickedly (E4M6) Main -> Against Thee Wickedly (E4M6) Blue", player), lambda state:
         state.has("Against Thee Wickedly (E4M6) - Blue skull key", player, 1))
     set_rule(world.get_entrance("Against Thee Wickedly (E4M6) Main -> Against Thee Wickedly (E4M6) Yellow", player), lambda state:
@@ -440,7 +467,12 @@ def set_rules(doom_1993_world: "DOOM1993World"):
 
     # And Hell Followed (E4M7)
     set_rule(world.get_entrance("Hub -> And Hell Followed (E4M7) Main", player), lambda state:
-        state.has("And Hell Followed (E4M7)", player, 1))
+       (state.has("And Hell Followed (E4M7)", player, 1) and
+        state.has("Shotgun", player, 1) and
+        state.has("Chaingun", player, 1)) and
+       (state.has("Rocket launcher", player, 1) or
+        state.has("Plasma gun", player, 1) or
+        state.has("BFG9000", player, 1)))
     set_rule(world.get_entrance("And Hell Followed (E4M7) Main -> And Hell Followed (E4M7) Blue", player), lambda state:
         state.has("And Hell Followed (E4M7) - Blue skull key", player, 1))
     set_rule(world.get_entrance("And Hell Followed (E4M7) Main -> And Hell Followed (E4M7) Red", player), lambda state:
@@ -452,7 +484,13 @@ def set_rules(doom_1993_world: "DOOM1993World"):
 
     # Unto the Cruel (E4M8)
     set_rule(world.get_entrance("Hub -> Unto the Cruel (E4M8) Main", player), lambda state:
-        state.has("Unto the Cruel (E4M8)", player, 1))
+       (state.has("Unto the Cruel (E4M8)", player, 1) and
+        state.has("Chainsaw", player, 1) and
+        state.has("Shotgun", player, 1) and
+        state.has("Chaingun", player, 1) and
+        state.has("Rocket launcher", player, 1)) and
+       (state.has("BFG9000", player, 1) or
+        state.has("Plasma gun", player, 1)))
     set_rule(world.get_entrance("Unto the Cruel (E4M8) Main -> Unto the Cruel (E4M8) Red", player), lambda state:
         state.has("Unto the Cruel (E4M8) - Red skull key", player, 1))
     set_rule(world.get_entrance("Unto the Cruel (E4M8) Main -> Unto the Cruel (E4M8) Yellow", player), lambda state:
@@ -463,7 +501,12 @@ def set_rules(doom_1993_world: "DOOM1993World"):
 
     # Fear (E4M9)
     set_rule(world.get_entrance("Hub -> Fear (E4M9) Main", player), lambda state:
-        state.has("Fear (E4M9)", player, 1))
+        state.has("Fear (E4M9)", player, 1) and
+        state.has("Shotgun", player, 1) and
+        state.has("Chaingun", player, 1) and
+        state.has("Rocket launcher", player, 1) and
+        state.has("Plasma gun", player, 1) and
+        state.has("BFG9000", player, 1))
     set_rule(world.get_entrance("Fear (E4M9) Main -> Fear (E4M9) Yellow", player), lambda state:
         state.has("Fear (E4M9) - Yellow skull key", player, 1))
     set_rule(world.get_entrance("Fear (E4M9) Yellow -> Fear (E4M9) Main", player), lambda state:
