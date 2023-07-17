@@ -2400,7 +2400,7 @@ location_table: Dict[int, LocationDict] = {
              'map': 5,
              'index': 31,
              'doom_type': 2006,
-             'region': "They Will Repent (E4M5) Yellow"},
+             'region': "They Will Repent (E4M5) Red"},
     351398: {'name': 'They Will Repent (E4M5) - Chaingun',
              'episode': 4,
              'map': 5,
