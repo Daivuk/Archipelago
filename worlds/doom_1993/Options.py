@@ -1,6 +1,6 @@
 import typing
 
-from Options import AssembleOptions, Choice, Toggle, DeathLink, DefaultOnToggle
+from Options import AssembleOptions, Choice, Toggle, DeathLink, DefaultOnToggle, StartInventoryPool
 
 
 class Difficulty(Choice):
@@ -81,6 +81,7 @@ class Episode3(DefaultOnToggle):
 
 
 options: typing.Dict[str, AssembleOptions] = {
+    "start_inventory_from_pool": StartInventoryPool,
     "difficulty": Difficulty,
     "random_monsters": RandomMonsters,
     "random_pickups": RandomPickups,
