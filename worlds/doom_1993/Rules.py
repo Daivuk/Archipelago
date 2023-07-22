@@ -205,6 +205,8 @@ def set_rules(doom_1993_world: "DOOM1993World"):
         state.has("Halls of the Damned (E2M6) - Red skull key", player, 1))
     set_rule(world.get_entrance("Halls of the Damned (E2M6) Main -> Halls of the Damned (E2M6) Yellow", player), lambda state:
         state.has("Halls of the Damned (E2M6) - Yellow skull key", player, 1))
+    set_rule(world.get_entrance("Halls of the Damned (E2M6) Main -> Halls of the Damned (E2M6) One way Yellow", player), lambda state:
+        state.has("Halls of the Damned (E2M6) - Yellow skull key", player, 1))
     set_rule(world.get_entrance("Halls of the Damned (E2M6) Blue Yellow Red -> Halls of the Damned (E2M6) Main", player), lambda state:
         state.has("Halls of the Damned (E2M6) - Blue skull key", player, 1) and
         state.has("Halls of the Damned (E2M6) - Yellow skull key", player, 1) and
@@ -373,13 +375,13 @@ def set_rules(doom_1993_world: "DOOM1993World"):
         state.has("BFG9000", player, 1)))
     set_rule(world.get_entrance("Warrens (E3M9) Main -> Warrens (E3M9) Red", player), lambda state:
         state.has("Warrens (E3M9) - Red skull key", player, 1))
+    set_rule(world.get_entrance("Warrens (E3M9) Main -> Warrens (E3M9) Blue", player), lambda state:
+        state.has("Warrens (E3M9) - Blue skull key", player, 1))
     set_rule(world.get_entrance("Warrens (E3M9) Main -> Warrens (E3M9) Blue trigger", player), lambda state:
         state.has("Warrens (E3M9) - Blue skull key", player, 1))
     set_rule(world.get_entrance("Warrens (E3M9) Red -> Warrens (E3M9) Main", player), lambda state:
         state.has("Warrens (E3M9) - Red skull key", player, 1))
     set_rule(world.get_entrance("Warrens (E3M9) Blue -> Warrens (E3M9) Main", player), lambda state:
-        state.has("Warrens (E3M9) - Blue skull key", player, 1))
-    set_rule(world.get_entrance("Warrens (E3M9) Blue trigger -> Warrens (E3M9) Main", player), lambda state:
         state.has("Warrens (E3M9) - Blue skull key", player, 1))
 
     # Hell Beneath (E4M1)

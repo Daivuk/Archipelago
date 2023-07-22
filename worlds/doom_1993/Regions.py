@@ -354,7 +354,7 @@ regions:List[RegionDict] = [
      "connections":["Warrens (E3M9) Main"]},
     {"name":"Warrens (E3M9) Blue trigger",
      "connects_to_hub":False,
-     "connections":["Warrens (E3M9) Main"]},
+     "connections":[]},
 
     # Hell Beneath (E4M1)
     {"name":"Hell Beneath (E4M1) Main",
